@@ -1,0 +1,30 @@
+name: Restore verified Jeopardy history
+on:
+  push:
+    paths:
+      - '.recovery/Jeopardy.bundle'
+permissions:
+  contents: write
+jobs:
+  restore:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Restore original commits and verified source without losing remote history
+        shell: bash
+        run: |
+          set -euo pipefail
+          git bundle verify .recovery/Jeopardy.bundle
+          git fetch .recovery/Jeopardy.bundle refs/heads/main:refs/heads/restored
+          test "$(git rev-parse restored)" = db85683f4ebf321bafaaf83d02451cb953fb9959
+          git merge-base --is-ancestor e9e4c053808130e749a0b3a54d8a4491b10104f0 restored
+          git merge-base --is-ancestor db0ebd5195a5cd74a50816b89491a31a70c5012a restored
+          git config user.name "Codex"
+          git config user.email "codex@openai.com"
+          git merge --allow-unrelated-histories --strategy=ours --no-commit restored
+          git read-tree --reset -u restored
+          git commit -m "Restore complete Jeopardy history and verified public deployment"
+          test "$(git rev-parse HEAD^{tree})" = "$(git rev-parse restored^{tree})"
+          git push origin HEAD:main
