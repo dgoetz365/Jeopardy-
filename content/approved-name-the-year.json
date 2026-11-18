@@ -1,0 +1,54 @@
+{
+  "category": "Name the Year",
+  "replaces": "Odd One Out",
+  "round": 1,
+  "categoryIndex": 4,
+  "status": "complete",
+  "approvedClues": [
+    {
+      "id": "0-4-0",
+      "value": 200,
+      "question": "In March of this year, the World Health Organization called COVID-19 a pandemic.",
+      "answer": "2020",
+      "source": "https://www.who.int/emergencies/diseases/novel-coronavirus-2019/events-as-they-happen"
+    },
+    {
+      "id": "0-4-1",
+      "value": 400,
+      "selectionId": "NY400A",
+      "question": "Poland and Ukraine co-hosted the European football championship and London hosted the Summer Olympics. What year was it?",
+      "answer": "2012"
+    },
+    {
+      "id": "0-4-2",
+      "value": 600,
+      "selectionId": "NY600B",
+      "question": "Germany won the men’s World Cup in Brazil and the first Guardians of the Galaxy film came out. What year was it?",
+      "answer": "2014"
+    },
+    {
+      "id": "0-4-3",
+      "value": 800,
+      "selectionId": "NY800G",
+      "question": "The Mets opened Citi Field, and James Cameron’s first Avatar hit theaters. What year was it?",
+      "answer": "2009",
+      "source": "https://www.mlb.com/news/featured/citi-field-guide-capacity-seating-chart-parking-and-more",
+      "additionalSources": [
+        "https://www.avatar.com/movies/avatar"
+      ]
+    },
+    {
+      "id": "0-4-4",
+      "value": 1000,
+      "selectionId": "NY1000G",
+      "question": "The Mets acquired Mike Piazza from the Marlins, Disney released the animated Mulan, and Cher’s “Believe” reached No. 1 in the UK. What year was it?",
+      "answer": "1998",
+      "source": "https://www.mlb.com/news/who-won-mike-piazza-trade-mets-marlins",
+      "additionalSources": [
+        "https://movies.disney.com/mulan",
+        "https://www.officialcharts.com/songs/cher-believe/"
+      ]
+    }
+  ],
+  "pendingValues": []
+}

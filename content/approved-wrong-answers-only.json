@@ -1,0 +1,49 @@
+{
+  "category": "Wrong Answers Only",
+  "replaces": "Finish the Pattern",
+  "round": 2,
+  "categoryIndex": 5,
+  "status": "complete",
+  "approvedClues": [
+    {
+      "id": "1-5-0",
+      "value": 400,
+      "selectionId": "C",
+      "question": "Cinderella leaves behind a glass glove at the ball.",
+      "answer": "A glass slipper",
+      "source": "https://movies.disney.com/cinderella"
+    },
+    {
+      "id": "1-5-1",
+      "value": 800,
+      "selectionId": "D",
+      "question": "In chess, the piece that jumps in an L shape is the bishop.",
+      "answer": "The knight",
+      "source": "https://handbook.fide.com/chapter/E012023"
+    },
+    {
+      "id": "1-5-2",
+      "value": 1200,
+      "selectionId": "D",
+      "question": "The world's tallest building, the Burj Khalifa, stands in Abu Dhabi.",
+      "answer": "Dubai",
+      "source": "https://www.guinnessworldrecords.com/world-records/tallest-structure"
+    },
+    {
+      "id": "1-5-3",
+      "value": 1600,
+      "question": "Michelangelo painted The Last Supper on a wall of a convent in Milan.",
+      "answer": "Leonardo da Vinci",
+      "source": "https://whc.unesco.org/en/list/93"
+    },
+    {
+      "id": "1-5-4",
+      "value": 2000,
+      "selectionId": "D",
+      "question": "The Mets’ first home ballpark, before Shea Stadium, was Yankee Stadium.",
+      "answer": "The Polo Grounds",
+      "source": "https://www.mlb.com/news/featured/citi-field-guide-capacity-seating-chart-parking-and-more"
+    }
+  ],
+  "pendingValues": []
+}

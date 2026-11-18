@@ -1,0 +1,49 @@
+{
+  "category": "Flagged for Review",
+  "round": 2,
+  "categoryIndex": 2,
+  "status": "complete",
+  "approvedClues": [
+    {
+      "id": "1-2-0",
+      "value": 400,
+      "selectionId": "B",
+      "question": "A green field, a yellow diamond, and a blue globe surround the words Ordem e Progresso on this country’s flag.",
+      "answer": "Brazil",
+      "source": "https://www.brasilemb.org/national-symbols-3/"
+    },
+    {
+      "id": "1-2-1",
+      "value": 800,
+      "selectionId": "B",
+      "question": "Turn its green, white, and red stripes sideways and you might mistake it for Hungary. Keep them vertical and you have the flag of the team Mets great Mike Piazza managed.",
+      "answer": "Italy",
+      "source": "https://www.mlb.com/news/mike-piazza-named-team-italy-manager"
+    },
+    {
+      "id": "1-2-2",
+      "value": 1200,
+      "selectionId": "A",
+      "question": "Five little shields form a crown above a larger red-and-white checkerboard on this European country’s flag.",
+      "answer": "Croatia",
+      "source": "https://unstats.un.org/unsd/ungegn/sessions/4th_session_2025/documents/GEGN.2_2025_87_CRP87_item4b.pdf"
+    },
+    {
+      "id": "1-2-3",
+      "value": 1600,
+      "selectionId": "C",
+      "question": "Start with Poland’s flag. From the flagpole, extend a blue triangle halfway across the white and red bands. You’ve drawn the flag of this neighboring country.",
+      "answer": "Czechia",
+      "source": "https://vlada.gov.cz/assets/urad-vlady/udalosti/symboly-katalog_1.pdf"
+    },
+    {
+      "id": "1-2-4",
+      "value": 2000,
+      "selectionId": "A",
+      "question": "[flag-01] This African country flies the flag shown here.",
+      "answer": "Chad",
+      "source": "https://www.crwflags.com/FotW/FLAGS/td.html"
+    }
+  ],
+  "pendingValues": []
+}

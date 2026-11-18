@@ -1,0 +1,44 @@
+{
+  "category": "The Connection",
+  "round": 2,
+  "categoryIndex": 4,
+  "status": "complete",
+  "approvedClues": [
+    {
+      "id": "1-4-0",
+      "value": 400,
+      "question": "A top hat, a hotel, and a card that gets you out of jail for free. Name the board game.",
+      "answer": "Monopoly",
+      "source": "https://www.hasbro.com/common/instruct/42787.pdf"
+    },
+    {
+      "id": "1-4-1",
+      "value": 800,
+      "question": "Lionel Messi wore its shirt. So did Robert Lewandowski. Its fans call Camp Nou home. Name the club.",
+      "answer": "FC Barcelona",
+      "source": "https://www.fcbarcelona.com/en/football/first-team/news/4504923/spotify-camp-nou-salutes-robert-lewandowski"
+    },
+    {
+      "id": "1-4-2",
+      "value": 1200,
+      "question": "A new cap, sunglasses, and a fake mustache. In 1999, this Mets manager put on all three to sneak back into the dugout after an ejection.",
+      "answer": "Bobby Valentine",
+      "source": "https://www.mlb.com/mets/news/mets-most-comical-moments-in-history"
+    },
+    {
+      "id": "1-4-3",
+      "value": 1600,
+      "question": "A spinning top in Inception, a ticking clock in Dunkirk, and a journey through a wormhole in Interstellar. Name the director.",
+      "answer": "Christopher Nolan",
+      "source": "https://www.paramountpictures.com/movies/interstellar"
+    },
+    {
+      "id": "1-4-4",
+      "value": 2000,
+      "question": "A volcanic eruption, a summer that barely felt like summer, and a ghost-story challenge near Lake Geneva all helped bring this Mary Shelley novel to life.",
+      "answer": "Frankenstein",
+      "source": "https://www.smithsonianmag.com/blogs/smithsonian-books/2025/01/24/how-the-largest-volcanic-eruption-in-human-history-changed-the-world/"
+    }
+  ],
+  "pendingValues": []
+}

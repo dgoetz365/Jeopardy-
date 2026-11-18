@@ -1,0 +1,49 @@
+{
+  "category": "Behind the Brand",
+  "round": 2,
+  "categoryIndex": 0,
+  "status": "complete",
+  "approvedClues": [
+    {
+      "id": "1-0-0",
+      "value": 400,
+      "selectionId": "E",
+      "question": "A pharmacist called his soda “Brad’s Drink.” Today its bottle carries a red, white, and blue globe.",
+      "answer": "Pepsi",
+      "source": "https://www.pepsico.com/newsroom/stories/2026/pepsi-history-brads-drink-iconic-american-brand"
+    },
+    {
+      "id": "1-0-1",
+      "value": 800,
+      "selectionId": "D",
+      "question": "Decades before its Goldbears, this German candy company sold a slimmer gummy called the Dancing Bear.",
+      "answer": "Haribo",
+      "source": "https://www.haribo.com/en-us/about-us/history"
+    },
+    {
+      "id": "1-0-2",
+      "value": 1200,
+      "selectionId": "C",
+      "question": "The first two letters of this furniture retailer come from founder Ingvar Kamprad. His family farm and a nearby village supplied the other two.",
+      "answer": "IKEA",
+      "source": "https://www.ikea.com/global/en/our-business/how-we-work/story-of-ikea/"
+    },
+    {
+      "id": "1-0-3",
+      "value": 1600,
+      "selectionId": "D",
+      "question": "A garage, a gas station, and a hotel could all earn a listing in the original red guide published by this French manufacturer.",
+      "answer": "Michelin",
+      "source": "https://www.michelin.com/en/group/heritage"
+    },
+    {
+      "id": "1-0-4",
+      "value": 2000,
+      "selectionId": "A",
+      "question": "Before the Mets played the Phillies in London in 2024, MLB tapped Rob McElhenney for a ceremonial first pitch. Across the Welsh border, he was better known as co-owner of this football club.",
+      "answer": "Wrexham AFC",
+      "source": "https://www.mlb.com/news/2024-london-series-preview-phillies-vs-mets"
+    }
+  ],
+  "pendingValues": []
+}

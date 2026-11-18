@@ -1,0 +1,62 @@
+{
+  "category": "Mets Easter Eggs",
+  "round": 1,
+  "categoryIndex": 3,
+  "status": "complete",
+  "approvedClues": [
+    {
+      "id": "0-3-0",
+      "value": 200,
+      "selectionId": "ME200D",
+      "question": "Citi Field’s “Home Run” landmark is shaped like which fruit?",
+      "answer": "An apple",
+      "source": "https://www.mlb.com/mets/ballpark/information/guide"
+    },
+    {
+      "id": "0-3-1",
+      "value": 400,
+      "selectionId": "ME400J",
+      "question": "Which Serbian tennis champion visited the Mets and swapped his racket for a bat in August 2025?",
+      "answer": "Novak Djokovic",
+      "source": "https://www.mlb.com/amp/news/novak-djokovic-meets-mets-players-at-citi-field.html",
+      "additionalSources": [
+        "https://www.atptour.com/players/novak-djokovic/d643/overview"
+      ]
+    },
+    {
+      "id": "0-3-2",
+      "value": 600,
+      "selectionId": "ME600E",
+      "question": "Which band, fronted by Mick Jagger, performed at the Mets’ former home, Shea Stadium?",
+      "answer": "The Rolling Stones",
+      "source": "https://content.mlb.com/documents/9/1/8/313006918/New_York_Mets_Media_Guide.pdf",
+      "additionalSources": [
+        "https://www.npg.org.uk/collections/search/person/mp05443/sir-michael-philip-mick-jagger"
+      ]
+    },
+    {
+      "id": "0-3-3",
+      "value": 800,
+      "selectionId": "ME800W",
+      "question": "What three-letter title appeared on the Mets’ celebration sign after José Iglesias turned his own song into the team’s 2024 anthem?",
+      "answer": "OMG",
+      "source": "https://www.mlb.com/news/mets-ties-to-grimace-lucky-playoff-pumpkin-explained"
+    },
+    {
+      "id": "0-3-4",
+      "value": 1000,
+      "selectionId": "ME1000R",
+      "question": "Citi Field’s purple Grimace seat is in row 6, seat 12. What date do those numbers encode, and what happened at the ballpark that day?",
+      "answer": "June 12, when Grimace threw the ceremonial first pitch.",
+      "source": "https://www.mlb.com/mets/news/grimace-gets-purple-seat-at-citi-field"
+    }
+  ],
+  "pendingValues": [],
+  "rejectedSelectionIds": [
+    "ME400A",
+    "ME400B",
+    "ME400C",
+    "ME400D",
+    "ME400E"
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "category": "The Missing Piece",
+  "round": 1,
+  "categoryIndex": 5,
+  "approvedClues": [
+    {
+      "id": "0-5-0",
+      "value": 200,
+      "selectionId": "MP200B",
+      "question": "Red, yellow, and ___ are the three colors in the traditional painter’s primary-color model.",
+      "answer": "Blue"
+    },
+    {
+      "id": "0-5-1",
+      "value": 400,
+      "selectionId": "MP400-MEDLEY",
+      "question": "Complete the swimming medley strokes: butterfly, backstroke, breaststroke, and ___.",
+      "answer": "Freestyle"
+    },
+    {
+      "id": "0-5-2",
+      "value": 600,
+      "selectionId": "MP600C",
+      "question": "The four constituent countries of the United Kingdom are England, Scotland, Northern Ireland, and ___.",
+      "answer": "Wales"
+    },
+    {
+      "id": "0-5-3",
+      "value": 800,
+      "selectionId": "MP800-LUXEMBOURG",
+      "question": "Belgium, the Netherlands, and ___ form a three-country union. The missing country shares its name with its capital.",
+      "answer": "Luxembourg",
+      "source": "https://www.benelux.int/en/",
+      "additionalSources": [
+        "https://european-union.europa.eu/principles-countries-history/eu-countries/luxembourg_en"
+      ]
+    },
+    {
+      "id": "0-5-4",
+      "value": 1000,
+      "selectionId": "MP1000D",
+      "question": "The Mets’ first three World Series opponents, in order, were the Baltimore Orioles, the ___, and the Boston Red Sox.",
+      "answer": "Oakland Athletics (Oakland A’s)",
+      "source": "https://www.mlb.com/postseason/history/1973"
+    }
+  ],
+  "pendingValues": [],
+  "status": "complete"
+}

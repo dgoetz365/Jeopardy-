@@ -1,0 +1,44 @@
+{
+  "category": "Double Takes",
+  "round": 2,
+  "categoryIndex": 1,
+  "status": "complete",
+  "approvedClues": [
+    {
+      "id": "1-1-0",
+      "value": 400,
+      "question": "This actor has been filming The Comebacker at Citi Field, where he plays a Mets pitching coach. In Cast Away, the ball he talked to was a volleyball named Wilson.",
+      "answer": "Tom Hanks",
+      "source": "https://secretnyc.co/tom-hanks-the-comebacker-citi-field-filming-mets/"
+    },
+    {
+      "id": "1-1-1",
+      "value": 800,
+      "question": "She sang “Dancing Queen” as Donna in Mamma Mia! and ran a fashion magazine as Miranda Priestly in The Devil Wears Prada.",
+      "answer": "Meryl Streep",
+      "source": ""
+    },
+    {
+      "id": "1-1-2",
+      "value": 1200,
+      "question": "He had two very different kids to protect: Grogu in The Mandalorian and Ellie in The Last of Us.",
+      "answer": "Pedro Pascal",
+      "source": "https://www.televisionacademy.com/bios/pedro-pascal"
+    },
+    {
+      "id": "1-1-3",
+      "value": 1600,
+      "question": "In Middle-earth, he stood on a bridge and refused to let a Balrog pass. In X-Men, he could move the whole bridge if it was made of metal.",
+      "answer": "Ian McKellen",
+      "source": ""
+    },
+    {
+      "id": "1-1-4",
+      "value": 2000,
+      "question": "As Nigel in The Devil Wears Prada, he helped Andy dress for Runway. As Caesar Flickerman in The Hunger Games, he interviewed the tributes before they entered the arena.",
+      "answer": "Stanley Tucci",
+      "source": "https://www.fandango.com/people/stanley-tucci-686120/film-credits"
+    }
+  ],
+  "pendingValues": []
+}

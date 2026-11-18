@@ -1,0 +1,50 @@
+{
+  "category": "Around the World",
+  "replaces": "Which Came First?",
+  "round": 1,
+  "categoryIndex": 2,
+  "status": "complete",
+  "approvedClues": [
+    {
+      "id": "0-2-0",
+      "value": 200,
+      "selectionId": "AW200C",
+      "question": "Mount Fuji is a landmark of which country?",
+      "answer": "Japan",
+      "source": "https://whc.unesco.org/en/list/1418"
+    },
+    {
+      "id": "0-2-1",
+      "value": 400,
+      "selectionId": "AW400E",
+      "question": "What is the world’s smallest independent country by area?",
+      "answer": "Vatican City",
+      "source": "https://www.guinnessworldrecords.com/world-records/smallest-country"
+    },
+    {
+      "id": "0-2-2",
+      "value": 600,
+      "selectionId": "AW600D",
+      "question": "Which country has three capitals: Pretoria, Cape Town and Bloemfontein?",
+      "answer": "South Africa",
+      "source": "https://www.gov.za/about-sa/south-africa-glance-1"
+    },
+    {
+      "id": "0-2-3",
+      "value": 800,
+      "selectionId": "AW800C",
+      "question": "Which country has the world’s longest coastline?",
+      "answer": "Canada",
+      "source": "https://www.canada.ca/en/services/environment/our-environment/nature-based-climate-solutions/coastlines.html"
+    },
+    {
+      "id": "0-2-4",
+      "value": 1000,
+      "selectionId": "AW1000E",
+      "question": "Astana is the capital of which country?",
+      "answer": "Kazakhstan",
+      "source": "https://www.gov.kz/article/19305?lang=en"
+    }
+  ],
+  "pendingValues": []
+}

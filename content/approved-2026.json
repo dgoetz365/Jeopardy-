@@ -1,0 +1,44 @@
+{
+  "category": "2026",
+  "round": 1,
+  "categoryIndex": 0,
+  "status": "complete",
+  "approvedClues": [
+    {
+      "id": "0-0-0",
+      "value": 200,
+      "question": "Which three countries hosted the 2026 men’s FIFA World Cup?",
+      "answer": "United States, Canada, and Mexico",
+      "source": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/fifa-world-cup-2026-hosts-cities-dates-usa-mexico-canada"
+    },
+    {
+      "id": "0-0-1",
+      "value": 400,
+      "question": "For which film did Michael B. Jordan win the Oscar for Best Actor in 2026?",
+      "answer": "Sinners",
+      "source": "https://www.oscars.org/oscars/ceremonies/2026"
+    },
+    {
+      "id": "0-0-2",
+      "value": 600,
+      "question": "The 2026 war involving Iran disrupted shipping through which narrow waterway at the entrance to the Persian Gulf?",
+      "answer": "Strait of Hormuz",
+      "source": "https://www.imo.org/en/mediacentre/hottopics/pages/middle-east-strait-of-hormuz.aspx"
+    },
+    {
+      "id": "0-0-3",
+      "value": 800,
+      "question": "When Donald Trump pushed for U.S. control of Greenland in 2026, which NATO ally’s kingdom was Greenland part of?",
+      "answer": "Denmark",
+      "source": "https://www.reuters.com/world/europe/trump-says-greenland-should-be-controlled-by-us-not-denmark-2026-07-07/"
+    },
+    {
+      "id": "0-0-4",
+      "value": 1000,
+      "question": "When TikTok announced its new U.S. joint venture in January 2026, which Chinese parent company retained a minority stake?",
+      "answer": "ByteDance",
+      "source": "https://newsroom.tiktok.com/announcement-from-the-new-tiktok-usds-joint-venture-llc?lang=en"
+    }
+  ],
+  "pendingValues": []
+}
