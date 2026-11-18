@@ -50,6 +50,10 @@ export function act(original:Game,action:Action,userId:string,now=Date.now()):Ga
   const p=g.players.find(p=>p.id===g.buzz)!;const c=activeClue(g)!;snapshot(g);p.score+=action.correct?c.value:-c.value;g.attempted.push(p.id);g.buzz=null;
   if(action.correct){g.phase='answer';g.used.push(c.id);g.buzzOpen=false;g.endsAt=null;g.pausedMs=null;}
   else{g.buzzOpen=true;g.endsAt=now+Math.max(5000,g.pausedMs||0);g.pausedMs=null;}break;}
+	 case 'setScore':host();if(!['lobby','board','clue','answer'].includes(g.phase))fail('Correct scores before Final Jeopardy begins.');{
+	  const p=g.players.find(p=>p.id===action.playerId);if(!p)fail('Player not found.');
+	  const score=action.score;if(typeof score!=='number'||!Number.isSafeInteger(score)||score< -1000000||score>1000000)fail('Enter a whole-number score from -1,000,000 to 1,000,000.');
+	  if(p.score!==score){snapshot(g);p.score=score;}break;}
  case 'reveal':host();if(g.phase!=='clue')fail('Select a clue first.');g.phase='answer';if(g.active&&!g.used.includes(g.active))g.used.push(g.active);g.buzz=null;g.buzzOpen=false;g.endsAt=null;g.pausedMs=null;break;
  case 'board':host();if(g.phase!=='answer')fail('Reveal the answer before returning to the board.');g.phase='board';g.active=null;g.history=[];break;
  case 'nextRound':host();if(g.phase!=='board')fail('Return to the board first.');g.history=[];g.active=null;if(g.round===0)g.round=1;else{g.round=2;g.phase='finalWager';g.players.forEach(p=>{p.before=p.score;p.wager=p.score>0?null:0;p.response=null;p.judgment=p.score>0?null:false;});}break;

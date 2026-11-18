@@ -27,6 +27,7 @@ The public audience is required. A private Site would impose platform sign-in be
 - Host sessions expire after 8 hours; guest sessions after 7 days. Every request verifies the stored session and expiry. Sign out revokes the token immediately. Leaving a view preserves the session for resumption.
 - A valid host session can create and resume multiple rooms in the same browser. Historical-room password recovery rotates the token. One-click rooms have no account-based recovery after expiry or sign-out; create a new room if the host session is lost. Existing host sessions remain usable for their rooms until expiry or explicit sign-out.
 - The server ignores client-supplied identity/role fields. Guests cannot read another room, use host commands, see unplayed answers, or see another player's private wager or response before reveal. Hosts also cannot see private wagers and responses before reveal.
+- The host can set an individual player's whole-number score during the two regular rounds; the server validates the player, phase, value, host session, and current room version. Changes are visible to all players and can be undone until a board transition or new clue clears the undo history. Final Jeopardy score edits are disabled after wagering begins so locked wagers and eligibility are not silently changed. Final response judgments can be corrected before results.
 - Mutations require a same-origin Origin header and JSON content type. Bodies are capped at 150,000 bytes while streaming.
 - D1 atomic rate limits apply per client IP and per session. Room creation: 3 per IP per 10 minutes and 12 per IP per day; historical password attempts: 10 per IP per 15 minutes; joins: 30 per IP per minute; session commands: 120 per minute; reads: 240 per session per minute. Shared-IP request ceilings accommodate a 24-player room. A 429 response includes Retry-After. Expired session/limiter rows are cleaned in bounded background batches.
 
@@ -57,6 +58,8 @@ Local runtime secrets belong only in ignored `.dev.vars` files. Local migrations
 ## Synchronization and operating limits
 
 The server uses optimistic version checks and atomic D1 updates. Concurrent joins and player actions retry conflicts; stale host commands return 409 rather than applying twice. Clients poll every 650 ms during clues and less often in other phases. Buzzer order is determined by the first accepted server update, so network latency can affect close races. Maximum room size is 24 individual players.
+
+When a room reaches results, the client clears its stored resume code and stops polling. On later visits, a stored code for an older completed or inaccessible room is discarded. The results remain in D1 so players can view the final board while on that page and the host can download scores before leaving. Completion does not delete the room's database record.
 
 Keep the host browser session active during play. The app does not include account-based host or guest recovery across browsers or devices: a player should resume using the browser that joined. Hosts should export approved question files for reuse in another room.
 

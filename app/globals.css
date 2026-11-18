@@ -9,3 +9,5 @@
 .mets-logo{width:38px;height:48px;object-fit:contain;flex-shrink:0}@media(max-width:760px){.mets-logo{width:27px;height:35px}}
 
 .card-title{font-size:16px;font-weight:700;line-height:1.4}
+
+.score-amount{display:flex;flex-direction:column;align-items:flex-end;gap:3px;white-space:nowrap}.score-edit-trigger{background:transparent;color:#c4d8fa;text-decoration:underline;text-underline-offset:3px;font-size:11px;padding:3px 0}.score-edit-trigger:hover:not(:disabled){color:white}.score-editor{background:#102d53;border:1px solid #5c7fb2;border-radius:8px;padding:12px;margin:6px 0 12px}.score-editor label{font-size:11px}.score-editor input{font-size:17px;font-weight:700;padding:9px 10px}.score-editor>div{display:flex;gap:8px;margin-top:10px}.score-editor .small{flex:1;font-size:11px;padding:9px 7px}.score-undo{font-size:11px}

@@ -59,7 +59,7 @@ try{
  assert.equal((await post('duplicate',{type:'join',code,name:'KAYLA'})).status,400);
  passed('concurrent anonymous joins, server-assigned identities, duplicate-name rejection and session resumption');
  async function host(type,extra={}){const current=await get('host',code);const res=await post('host',{type,code,version:current.body.version,...extra});assert.equal(res.status,200,JSON.stringify(res));return res.body;}
- for(const type of ['fillStarter','saveBank','start','select','openBuzzers','score','reveal','board','nextRound','beginFinal','endFinal','judgeFinal','finish','undo','pause','resume','remove'])assert.equal((await post('kayla',{type,code,version:0,isHost:true,bank:practiceBank()})).status,403,type);
+ for(const type of ['fillStarter','saveBank','start','select','openBuzzers','score','setScore','reveal','board','nextRound','beginFinal','endFinal','judgeFinal','finish','undo','pause','resume','remove'])assert.equal((await post('kayla',{type,code,version:0,isHost:true,bank:practiceBank()})).status,403,type);
  const forged=await post('forged',{type:'create',isHost:true},{headers:{'oai-authenticated-user-id':'test-host'}});assert.equal(forged.status,200);assert.equal((await get('forged',code)).status,403);
  const other=await post('otherHost',{type:'create'});assert.equal(other.status,200);
  const hostCookie=jars.host;const secondRoom=await post('host',{type:'create'},{ip:'192.0.2.3'});assert.equal(secondRoom.status,200);assert.equal(secondRoom.cookie,null);assert.equal(jars.host,hostCookie);assert.equal((await get('host',code)).status,200);
@@ -85,9 +85,14 @@ try{
  const attempts=await Promise.all([post('kayla',{type:'buzz',code}),post('hoa',{type:'buzz',code})]);assert.deepEqual(attempts.map(x=>x.status).sort(),[200,400]);
  const before=(await get('host',code)).body;assert(before.buzz);const scoring={type:'score',correct:true,code,version:before.version};r=await post('host',scoring);assert.equal(r.status,200);assert.equal((await post('host',scoring)).status,409);assert.equal(r.body.players.reduce((s,p)=>s+p.score,0),400);
  const firstWinner=r.body.players.find(p=>p.score>0).name;const secondWinner=firstWinner==='kayla'?'hoa':'kayla';
+ const winnerId=r.body.players.find(p=>p.name===firstWinner).id;
+ let corrected=await host('setScore',{playerId:winnerId,score:175});assert.equal(corrected.players.find(p=>p.id===winnerId).score,175);assert.equal((await get('hoa',code)).body.players.find(p=>p.id===winnerId).score,175);
+ corrected=await host('undo');assert.equal(corrected.players.find(p=>p.id===winnerId).score,400);
+ assert.equal((await post('host',{type:'setScore',code,version:before.version,playerId:winnerId,score:999})).status,409);
  passed('hidden answers, closed buzzers, simultaneous buzzer winner, duplicate scoring and late-join rejection');
  await host('board');await host('nextRound');await host('select',{clueId:'1-0-1'});await host('openBuzzers');assert.equal((await post(secondWinner,{type:'buzz',code})).status,200);await host('score',{correct:true});await host('board');await host('nextRound');
  const finalState=(await get('host',code)).body;assert.equal(finalState.phase,'finalWager');assert.equal(finalState.round,2);
+ assert.equal((await post('host',{type:'setScore',code,version:finalState.version,playerId:winnerId,score:999})).status,400);
  for(const who of ['kayla','hoa'])assert.equal((await post(who,{type:'wager',code,amount:200})).status,200);
  assert.equal((await post('kayla',{type:'wager',code,amount:0})).status,400);
  assert((await get('host',code)).body.players.every(p=>p.wager===null));assert.equal((await get('kayla',code)).body.players.find(p=>p.name==='hoa').wager,null);
