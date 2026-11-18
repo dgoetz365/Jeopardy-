@@ -112,7 +112,10 @@ try{
  assert.equal((await post('overflow',{type:'join',code:fullRoom.body.code,name:'Overflow'},{ip:'192.0.2.2'})).status,400);
  passed('24 simultaneous players retained without lost updates; room capacity enforced');
  const clientFiles=(await readdir('dist/client',{recursive:true})).filter(p=>p.endsWith('.js'));for(const file of clientFiles){const js=await readFile('dist/client/'+file,'utf8');assert(!js.includes('Nano Banana'),'Final answer must not ship in public JavaScript');assert(!js.includes('The 2026 FIFA World Cup expanded'),'Board answers must not ship in public JavaScript');}
- const home=await mf.dispatchFetch('https://game.test/');assert.equal(home.status,200);assert.equal(home.headers.get('X-Frame-Options'),'DENY');assert((await home.text()).includes('METS'));
+ const home=await mf.dispatchFetch('https://game.test/');assert.equal(home.status,200);assert.equal(home.headers.get('X-Frame-Options'),'DENY');
+ const homeHtml=await home.text();assert(homeHtml.includes('METS'));assert(!homeHtml.includes('THU, NOV 19'));assert(!homeHtml.includes('Conference Room Hernandez'));
+ const clientText=await Promise.all(clientFiles.map(file=>readFile('dist/client/'+file,'utf8')));
+ assert(!clientText.some(js=>js.includes('Choose your icon')||js.includes('avatar-picker')),'Guest UI must not offer decorative player icons');
  for(const asset of ['citi-field.jpg','mr-and-mrs-met.jpg','mets-logo.svg'])assert((await readFile('dist/client/images/'+asset)).length>1000);
  passed('anonymous home rendering and both original real photo assets packaged');
  console.log(JSON.stringify({runtime:'production Cloudflare Worker + isolated D1',integrationGroups:groups,result:'passed'}));
